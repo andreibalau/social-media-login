@@ -1,0 +1,13 @@
+<div>
+  <img src="{{ user?.photoUrl }}">
+  <div>
+    <h4>{{ user?.name }}</h4>
+    <p>{{ user?.email }}</p>
+  </div>
+</div>
+<ng-container *ngIf="loggedIn">
+  <app-angular-doc></app-angular-doc>
+</ng-container>
+<ng-container *ngIf="!loggedIn">
+  <app-login></app-login>
+</ng-container>
